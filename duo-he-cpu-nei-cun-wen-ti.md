@@ -52,3 +52,33 @@
 
 3、如何形式化文章所提出的问题，问题公式化。
 
+## 文章二：优化内存系统能效的 DＲAM 架构研究综述
+
+#### 核心关心内容1：DRAM内存结构
+
+![DRAM&#x7684;&#x5206;&#x5C42;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;](.gitbook/assets/qq-jie-tu-20190904101204.png)
+
+DRAM自顶向下分为9层：
+
+1、通道channel
+
+2、双列直插式内存模块（dual in-line memory modules，DIMMs）
+
+3、Rank、
+
+4、内存芯片chip
+
+5、Bank
+
+6、Subarray
+
+7、MAT
+
+8、行（row）
+
+9、单元（cell）
+
+Rank的特殊性：JEDEC协会定义Rank为提供64位总线的芯片集合。事实上DRAM芯片的数据输入/输出引脚有限，通常是4/8/16位，根据chip的类型DRAM分为\*4/\*8/\*16 DRAM。即一个Rank中chip的数量 = DRAM位数 / Chip位数。
+
+并行度：完全并行的channel级并行和部分并行的Rank级、Bank级并行（需要Rank或者Bank的切换开销）。Bank是最小并行单位，相同Bank请求只能顺序执行（物理上拥塞的来源）。
+
