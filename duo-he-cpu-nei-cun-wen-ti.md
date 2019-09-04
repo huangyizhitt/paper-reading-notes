@@ -2,7 +2,7 @@
 
 ### 文章一：MemGuard: Memory Bandwidth Reservation System for Efficient Performance Isolation in Multi-core Platforms
 
-### 作者：[Heechul Yun](http://www.ittc.ku.edu/~heechul/), Graduated from University of Illinois at Urbana-Champaign, USA
+### 作者：[Heechul Yun](http://www.ittc.ku.edu/~heechul/), Graduated from University of Illinois at Urbana-Champaign, USA and working at University of Kansas
 
 ### 文章来源：RTAS'13
 
@@ -43,4 +43,12 @@
 3、利用系统TICK中断做太多事情，是否会影响系统实时性。
 
 4、结合2和3，这套系统很可能无法应对多任务的情况。
+
+#### 急需从文章中学会的一些事情
+
+1、SPEC 2017的使用：还原文章中的问题描述实验
+
+2、如何用代码实现内存带宽的预留，阅读文章系统代码
+
+3、如何形式化文章所提出的问题，问题公式化。
 
