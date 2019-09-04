@@ -80,5 +80,5 @@ DRAM自顶向下分为9层：
 
 Rank的特殊性：JEDEC协会定义Rank为提供64位总线的芯片集合。事实上DRAM芯片的数据输入/输出引脚有限，通常是4/8/16位，根据chip的类型DRAM分为\*4/\*8/\*16 DRAM。即一个Rank中chip的数量 = DRAM位数 / Chip位数。
 
-并行度：完全并行的channel级并行和部分并行的Rank级、Bank级并行（需要Rank或者Bank的切换开销）。Bank是最小并行单位，相同Bank请求只能顺序执行（物理上拥塞的来源）。
+并行度：完全并行的channel级并行和部分并行的Rank级、Bank级并行（由于不同rank/bank之间是共享地址总线、命令总线和数据总线，不同rank/bank在同时接受请求时，rank/bank只能流水线方式接受请求，因此需要频繁切换）。Bank是最小并行单位，相同Bank请求只能顺序执行（物理上拥塞的来源）。
 
